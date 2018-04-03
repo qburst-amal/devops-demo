@@ -32,7 +32,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: ssh -o StrictHostKeyChecking=no ec2-user@35.154.112.213
-    
+      - run:- scp -r ./* username@my-server:/app/
 
 
